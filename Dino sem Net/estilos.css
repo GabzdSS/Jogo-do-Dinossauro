@@ -1,0 +1,47 @@
+body {
+    background: #fafafa;
+}
+
+.dinosaur {
+    width: 60px;
+    height: 60px;
+    background-image: url(imagens/dino.png);
+    position: absolute; /*se mantém na posição definida idependentemente do que estiver em volta*/
+    bottom: 0;
+
+}
+
+.cactus {
+    width: 60px;
+    height: 60px;
+    background-image: url(imagens/cactus.png); /* imagem buscada na pasta */
+    position: absolute;
+    bottom: 0;
+}
+
+.gameover {
+    text-align: center;
+    color: #666666;
+    margin-top: 50px;
+    font-family: Arial;
+}
+
+@keyframes slide { /* animação usada no background*/
+    from {
+        background-position: 70000%;
+    }
+
+    to {
+        background-position: 0;
+    }
+}
+
+.background {
+    position: absolute;
+    bottom: 0;
+    background-image: url(imagens/background.png);
+    background-repeat: repeat-x; /* faz o fundo repetir */
+    animation: slide 600s infinite linear; /* usa a animação feita com keyframes e definida aqui */
+    width: 100%;
+    height: 200px;
+}
